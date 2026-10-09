@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +11,25 @@
     <script src="js/auth.js" defer></script>
 </head>
 <body>
+    <main class="auth-card">
+        <a class="brand" href="index.html">SMCC Connect</a>
+        <h1>Login</h1>
+        <p>Welcome back, Michaelinian.</p>
 
-    <h1>SMCC Connect</h1>
-    <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
 
-    <form id="login-form">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-        <p id="form-message"></p>
-    </form>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/supabase.js" defer></script>
-    <script src="js/auth.js" defer></script>
+            <button class="btn" type="submit">Login</button>
+            <p id="form-message" role="status"></p>
+        </form>
 
+        <p>No account yet?
+            <a href="register.html">Create one</a>
+        </p>
+    </main>
 </body>
 </html>

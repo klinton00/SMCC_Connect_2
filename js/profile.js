@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelector("#profile-email").textContent =
         session.user.email || "";
 
+    document.querySelector("#profile-id").textContent = session.user.id;
+
     const { data: profile, error } = await window.sb
         .from("profiles")
         .select("full_name")

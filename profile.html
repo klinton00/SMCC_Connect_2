@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase.js" defer></script>
     <script src="js/profile.js" defer></script>
+    <script src="js/nav.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -18,6 +19,7 @@
             <a href="dashboard.html">Dashboard</a>
             <a href="announcements.html">Announcements</a>
             <a href="messages.html">Messages</a>
+            <button id="logout-button" class="btn btn-small">Logout</button>
         </div>
     </nav>
 
@@ -25,6 +27,8 @@
         <section class="form-card">
             <h1>My Profile</h1>
             <p id="profile-email"></p>
+            <p><small>Your profile ID (share this so others can message you):<br>
+            <code id="profile-id"></code></small></p>
 
             <form id="profile-form">
                 <label for="full_name">Full name</label>

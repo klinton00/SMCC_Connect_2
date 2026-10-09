@@ -45,16 +45,4 @@ document.addEventListener("DOMContentLoaded", async () => {
             container.append(card);
         });
     }
-
-    document.querySelector("#logout-button").addEventListener("click", async () => {
-        const { error } = await window.sb.auth.signOut();
-
-        if (error) {
-            alert("Unable to log out. Please try again.");
-            return;
-        }
-
-        window.location.replace("index.html");
-    });
 });
-    

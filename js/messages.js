@@ -66,6 +66,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
 
+        const uuidPattern =
+            /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+        if (!uuidPattern.test(recipientId)) {
+            status.textContent = "That is not a valid profile UUID.";
+            return;
+        }
+
         status.textContent = "Sending...";
 
         const { error } = await window.sb
