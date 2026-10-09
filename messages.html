@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | SMCC Connect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js" defer></script>
+    <script src="js/messages.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="dashboard.html">SMCC Connect</a>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Private Messages</h1>
+
+        <section class="form-card">
+            <h2>Send a message</h2>
+            <form id="message-form">
+                <label for="recipient">Recipient profile UUID</label>
+                <input id="recipient" type="text"
+                       placeholder="Paste the recipient's profile UUID"
+                       required>
+
+                <label for="content">Message</label>
+                <textarea id="content" maxlength="5000"
+                          required></textarea>
+
+                <button class="btn" type="submit">Send Message</button>
+                <p id="message-status" role="status"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Your conversations</h2>
+            <div id="messages-list" class="announcement-list">
+                Loading messages...
+            </div>
+        </section>
+    </main>
+</body>
+</html>

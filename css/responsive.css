@@ -1,0 +1,25 @@
+
+@media (max-width: 700px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 35px 22px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card,
+    .form-card {
+        margin: 25px 15px;
+        padding: 22px;
+    }
+}

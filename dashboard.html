@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SMCC Connect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="dashboard.html">SMCC Connect</a>
+        <div class="nav-links">
+            <a href="announcements.html">Announcements</a>
+            <a href="messages.html">Messages</a>
+            <a href="profile.html">Profile</a>
+            <button id="logout-button" class="btn btn-small">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 id="welcome">Loading your dashboard...</h1>
+        <p>Welcome to your student community.</p>
+
+        <div class="card-grid">
+            <a class="feature-card" href="announcements.html">
+                <h2>Announcements</h2>
+                <p>View the latest school updates.</p>
+            </a>
+
+            <a class="feature-card" href="messages.html">
+                <h2>Messages</h2>
+                <p>Connect privately with students.</p>
+            </a>
+
+            <a class="feature-card" href="profile.html">
+                <h2>My Profile</h2>
+                <p>Manage your profile information.</p>
+            </a>
+        </div>
+
+        <h2>Latest Announcements</h2>
+        <div id="dashboard-announcements" class="card-grid"></div>
+    </main>
+</body>
+</html>
